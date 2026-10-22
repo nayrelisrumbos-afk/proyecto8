@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffbb7a5; 
+    margin: 0;
+}
+
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    color: #1145b4;
+}
+header h2 {
+    color: #c30606;
+}
+
+figure {
+    margin: 0;
+    border-radius: 10px;
+    border: 3px solid #0033a0; 
+}
+
+figure img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.galeria {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px; 
+    gap: 15px; 
+    max-width: 1000px; 
+    margin: 0 auto; 
+}
+
+
+.grande {
+    grid-row: span 2;
+}
+
+.chiquita {
+    grid-row: span 1; 
+}
+
+
+@media (max-width: 800px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 500px) {
+    .galeria {
+        grid-template-columns: 1fr; 
+    }
+ 
+    .imagen-alta {
+        grid-row: span 1; 
+    }
+}
